@@ -23,6 +23,9 @@
 using namespace std;
 using namespace chrono;
 
+// ref() --> referencja
+// cref() --> referencja stała(const) aby nie namnazac szablonow, mozna kopiowac T jakby byl T& poprzez wlasnie wtlaczanie
+
 int main(){
 
     return 0;
