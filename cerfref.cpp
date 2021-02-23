@@ -26,7 +26,30 @@ using namespace chrono;
 // ref() --> referencja
 // cref() --> referencja stała(const) aby nie namnazac szablonow, mozna kopiowac T jakby byl T& poprzez wlasnie wtlaczanie
 
+template <typename T>
+void funkt(T x){ // dowolny typ, dzieki wtlaczaniu..
+    cout << "Jaka wartosc liczby wtloczeniowej przez ref?" << endl;
+    cin >> x;
+    cout << x << endl;   // zadziala T oraz T&..
+
+    cout << "petelka: " << endl;
+    for(int x = 1; x < 10; x++){
+        cout << x << endl;
+    }
+}
+
+template<typename T>
+void fufunkt(T x){
+    cout << x++ << endl;
+}
+
+
 int main(){
+    int x;
+
+    funkt(x);
+    cout << endl;
+    fufunkt(ref(x));
 
     return 0;
 }
