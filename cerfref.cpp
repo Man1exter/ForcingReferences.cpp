@@ -28,14 +28,8 @@ using namespace chrono;
 
 template <typename T>
 void funkt(T x){ // dowolny typ, dzieki wtlaczaniu..
-    cout << "Jaka wartosc liczby wtloczeniowej przez ref?" << endl;
-    cin >> x;
     cout << x << endl;   // zadziala T oraz T&..
-
-    cout << "petelka: " << endl;
-    for(int x = 1; x < 10; x++){
-        cout << x << endl;
-    }
+    ++x;
 }
 
 template<typename T>
@@ -43,13 +37,23 @@ void fufunkt(T x){
     cout << x++ << endl;
 }
 
+template<typename T>
+void fofokt(T x){
+    cout << x << endl;
+}
+
 
 int main(){
     int x;
 
+    cout << "Jaka wartosc liczby wtloczeniowej przez ref?" << endl;
+    cin >> x;
+
     funkt(x);
     cout << endl;
     fufunkt(ref(x));
+    cout << endl;
+    fofokt(cref(x)); // tutaj juz dodane +1 bo jest jako stala..
 
     return 0;
 }
