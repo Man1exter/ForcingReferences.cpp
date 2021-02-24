@@ -50,6 +50,8 @@ temp.push_back(ref(++x));  // 103
 temp.push_back(ref(++x));  // 103
 
 for(auto ele: temp) cout << ele << endl;
+
+cout << typeid(ref(x)).name() << endl; // reference_wrapper
 }
 
 
