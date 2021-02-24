@@ -19,6 +19,7 @@
 #include <thread>
 #include <future>
 #include "numbers.h"
+#include "006.h"
 
 using namespace std;
 using namespace chrono;
@@ -71,6 +72,13 @@ int main(){
     cout << "po 3 cref/ref~~ach = = = = = = = >" << endl;
     
     funkter();
+
+    cout << endl;
+    cout << endl;
+    cout << endl;
+
+    setlocale(LC_ALL,"");
+    _006();
 
     return 0;
 }
