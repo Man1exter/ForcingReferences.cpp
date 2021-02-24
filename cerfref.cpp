@@ -77,7 +77,7 @@ int main(){
     cout << endl;
     cout << endl;
 
-    setlocale(LC_ALL,"");
+    setlocale(LC_ALL," ");
     _006();
 
     return 0;
