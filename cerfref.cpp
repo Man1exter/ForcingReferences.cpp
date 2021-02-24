@@ -42,6 +42,16 @@ void fofokt(T x){
     cout << x << endl;
 }
 
+void funkter(){
+    int x = 100;
+vector<reference_wrapper<int>>temp;
+temp.push_back(ref(++x));  // 103
+temp.push_back(ref(++x));  // 103
+temp.push_back(ref(++x));  // 103
+
+for(auto ele: temp) cout << ele << endl;
+}
+
 
 int main(){
     int x;
@@ -54,6 +64,11 @@ int main(){
     fufunkt(ref(x));
     cout << endl;
     fofokt(cref(x)); // tutaj juz dodane +1 bo jest jako stala..
+    cout << endl;
+
+    cout << "po 3 cref/ref~~ach = = = = = = = >" << endl;
+    
+    funkter();
 
     return 0;
 }
